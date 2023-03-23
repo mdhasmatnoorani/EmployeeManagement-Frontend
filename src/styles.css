@@ -1,0 +1,13 @@
+.heading-primary{
+    font-family: 'Poppins', sans-serif;
+}
+h1,h2,h3,h4,h5,h6{
+    letter-spacing: 1px;
+    color: white !important;
+}
+.navbar{
+    padding: 18px 0 !important;
+}
+.footer{
+    padding: 18px 0 !important;
+}

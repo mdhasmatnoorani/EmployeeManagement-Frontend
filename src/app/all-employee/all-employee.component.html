@@ -1,0 +1,42 @@
+<main class="py-6 bg-surface-secondary">
+  <div class="container-fluid">
+<div class="card shadow border-0 mb-7">
+<div class="card-header">
+  <h5 class="mb-0 text-muted">Employee Details</h5>
+</div>
+<div class="table-responsive">
+  <table class="table table-hover table-nowrap">
+    <thead>
+      <tr>
+        <th class="p-3" scope="col">#</th>
+        <th class="p-3" scope="col">First Name</th>
+        <th class="p-3" scope="col">Last Name</th>
+        <th class="p-3" scope="col">Email</th>
+        <th class="p-3" scope="col">Address</th>
+        <th class="p-3" scope="col">Designation</th>
+        <th class="p-3" scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let e of allemployees; index as i;">
+        <th scope="row">{{i+1}}</th>
+        <td class="p-3">{{e.firstName}}</td>
+        <td class="p-3">{{e.lastName}}</td>
+        <td class="p-3">{{e.employeeId}}</td>
+        <td class="p-3">{{e.address}}</td>
+        <td class="p-3">{{e.designation}}</td>
+        <td>
+          <a class="text-primary" routerLink="/update-employee/{{e.employeeId}}"><i class="fa-solid fa-pen-to-square"></i></a>
+           |
+           <a class="text-danger" (click)="onDelete(e.employeeId)"><i class="fa-solid fa-trash"></i></a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div class="card-footer border-0 py-5">
+  <span class="text-muted text-sm">Showing {{numberOfEmployees}} items out of {{numberOfEmployees}} results found.</span>
+</div>
+</div>
+</div>
+</main>

@@ -1,0 +1,29 @@
+<div class="container my-5">
+    <h1 class="display-4 text-center py-4 alert alert-success mb-5">Admin Details</h1>
+    <table class="table table-bordered table-striped text-center">
+    <thead class="bg-dark text-light">
+      <tr>
+        <th class="p-3" scope="col">#</th>
+        <th class="p-3" scope="col">First Name</th>
+        <th class="p-3" scope="col">Last Name</th>
+        <th class="p-3" scope="col">Email</th>
+        <th class="p-3" scope="col">Password</th>
+        <th class="p-3" scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let a of alladmin; index as i">
+        <th scope="row">{{i+1}}</th>
+        <td class="p-3">{{a.firstName}}</td>
+        <td class="p-3">{{a.lastName}}</td>
+        <td class="p-3">{{a.adminEmailId}}</td>
+        <td class="p-3">{{a.password}}</td>
+        <td>
+          <a href="#edit-admin" class="text-primary"><i class="fa-solid fa-pen-to-square"></i></a>
+           |
+           <a href="#delete-admin" class="text-danger"><i class="fa-solid fa-trash"></i></a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

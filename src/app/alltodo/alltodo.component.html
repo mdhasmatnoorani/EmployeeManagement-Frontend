@@ -1,0 +1,25 @@
+<div class="container my-5">
+    <h1 class="display-4 text-center py-4 alert alert-success text-dark mb-5">APPROVED TODOS</h1>
+<table class="table table-striped text-center" #todo_report>
+    <thead class="bg-dark text-light">
+      <tr>
+        <th class="p-3" scope="col">#</th>
+        <th class="p-3" scope="col">Todo Name</th>
+        <th class="p-3" scope="col">Todo Description</th>
+        <th class="p-3" scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let t of todo; index as i">
+        <th scope="row">{{i+1}}</th>
+        <td class="p-3">{{t.todoName}}</td>
+        <td class="p-3">{{t.todoDescription}}</td>
+        <td>
+          <a class="text-primary px-1 all-todo-action-button" (click)="todoCompleted(t.todoId)"><i class="fa fa-square-check"></i></a>
+           |
+           <a class="text-danger px-1 all-todo-action-button" (click)="generatePdf(todo_report)"><i class="fa fa-file-pdf"></i></a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,2 +1,2 @@
-# EmployeeManagement-Frontend
-This is employee management frontend made with Angular
+# EmployeeManagementSystem_Frontend
+v0.1

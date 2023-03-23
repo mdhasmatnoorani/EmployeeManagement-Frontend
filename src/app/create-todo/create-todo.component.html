@@ -1,0 +1,24 @@
+<div class="container-fluid create-todo-wrapper mt-5">
+    <div class="row">
+      <h1 class="display-4 text-center py-4 alert alert-success text-dark create-todo-heading mb-5">CREATE TODO</h1>
+        <div class="col-md-8 offset-md-2">
+            <div class="card p-4">
+                <div class="card-body">
+                 <form>
+                  <div class="form-group py-2">
+                    <label for="firstName" class="form-label lead">Todo Name</label>
+                    <input type="text" class="form-control" name="todoName" id="todoName" [(ngModel)]="todo.todoName" />
+                  </div>
+                  <div class="form-group py-2">
+                    <label for="lastName" class="form-label lead">Todo Description</label>
+                    <input type="text" class="form-control" name="todoDescription" id="todoDescription" [(ngModel)]="todo.todoDescription" />
+                  </div>
+                  <div class="form-group py-2">
+                    <button type="submit" class="btn btn-dark" (click)="onAddTodo()"><span class="lead">Add Todo</span></button>
+                  </div>
+                 </form>
+            </div>
+        </div>
+    </div>
+</div>
+</div>

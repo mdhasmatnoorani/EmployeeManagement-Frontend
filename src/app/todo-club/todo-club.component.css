@@ -1,0 +1,14 @@
+a{
+    text-decoration: none;
+}
+.card{
+    box-shadow: 5px 5px 5px 2px rgba(0,0,0,0.1);
+}
+.card:hover{
+    transform: scale(1.02);
+    transition: all .3s ease-in-out;
+}
+.employee-task-icon{
+    height: 280px;
+    object-fit: contain;
+}
